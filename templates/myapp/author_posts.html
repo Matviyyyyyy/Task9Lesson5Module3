@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пости автора</title>
+</head>
+<body>
+    <h1>{{author.name }}</h1>
+    <h2>{{author.bio}}</h2>
+    <br>
+    <hr>
+    {% for post_author in posts_of_author %}
+    <br>
+    <h4>{{post_author.title}}</h4>
+    <h6>5{{post_author.content}}</h6>
+    <h6>5{{post_author.published_date}}</h6>
+    {%endfor%}
+</body>
+</html>
