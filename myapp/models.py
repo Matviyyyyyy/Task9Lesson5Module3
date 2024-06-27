@@ -24,6 +24,16 @@ class Post(models.Model):
     published_recently.short_description = "Published recently&"
 
 
+class Comment(models.Model):
+    post = models.ForeignKey(Post,  on_delete=models.DO_NOTHING, null=True)
+    author_name = models.CharField(max_length=170)
+    text = models.TextField()
+    created_date = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.author_name} - {self.created_date}"
+
+
 
 
 

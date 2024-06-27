@@ -9,5 +9,13 @@
     <br>
     <p>{{post.content}}</p>
     <h2>{{post.published_date}}</h2>
+    <h3>Comments</h3>
+    {% for comment in comments%}
+        <br>
+        <h3>{{comment.author_name}}</h3>
+        <p>{{comment.text}}</p>
+        <p>{{comment.created_date}}</p>
+
+    {% endfor %}
 </body>
 </html>
